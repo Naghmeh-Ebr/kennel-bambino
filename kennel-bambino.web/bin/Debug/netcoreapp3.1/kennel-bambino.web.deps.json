@@ -29,6 +29,8 @@
           "Microsoft.AspNetCore.Identity.UI": "3.1.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.3",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.3",
+          "Microsoft.Web.LibraryManager.Build": "2.0.96",
+          "mylib": "1.1.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -238,7 +240,7 @@
           "System.Runtime.InteropServices.RuntimeInformation": "4.0.4.0",
           "System.Runtime.InteropServices.WindowsRuntime": "4.0.4.0",
           "System.Runtime.Intrinsics": "4.0.1.0",
-          "System.Runtime.Loader": "4.1.1.0",
+          "System.Runtime.Loader.Reference": "4.1.1.0",
           "System.Runtime.Numerics": "4.1.2.0",
           "System.Runtime.Serialization": "4.0.0.0",
           "System.Runtime.Serialization.Formatters.Reference": "4.0.4.0",
@@ -302,6 +304,7 @@
           "kennel-bambino.web.dll": {}
         }
       },
+      "jQuery/2.1.1": {},
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.3": {
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -755,10 +758,29 @@
       },
       "Microsoft.NETCore.Platforms/2.0.0": {},
       "Microsoft.NETCore.Targets/1.1.0": {},
+      "Microsoft.Web.LibraryManager.Build/2.0.96": {
+        "dependencies": {
+          "System.Runtime.Loader": "4.3.0"
+        }
+      },
       "Microsoft.Win32.Registry/4.5.0": {
         "dependencies": {
           "System.Security.AccessControl": "4.5.0",
           "System.Security.Principal.Windows": "4.5.0"
+        }
+      },
+      "mylib/1.1.0": {
+        "dependencies": {
+          "SampleDependency": "1.0.0"
+        },
+        "runtime": {
+          "lib/net40/mylib.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/net40/mylib.dll": {}
         }
       },
       "Newtonsoft.Json/12.0.2": {
@@ -810,6 +832,11 @@
             "assetType": "native",
             "fileVersion": "4.6.25512.1"
           }
+        }
+      },
+      "SampleDependency/1.0.0": {
+        "dependencies": {
+          "jQuery": "2.1.1"
         }
       },
       "System.Collections/4.3.0": {
@@ -1158,6 +1185,13 @@
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Handles": "4.3.0"
+        }
+      },
+      "System.Runtime.Loader/4.3.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime.Serialization.Formatters/4.3.0": {
@@ -2607,7 +2641,7 @@
         },
         "compileOnly": true
       },
-      "System.Runtime.Loader/4.1.1.0": {
+      "System.Runtime.Loader.Reference/4.1.1.0": {
         "compile": {
           "System.Runtime.Loader.dll": {}
         },
@@ -2951,6 +2985,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "jQuery/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/cy0NGAGBx0W6XLqrnehQAKeJhfnZLDdPnBvlNLq/k4mraD1a7rbHBYzV5PYBaz9t5wh+VrGhPUbPztvnFAOrQ==",
+      "path": "jquery/2.1.1",
+      "hashPath": "jquery.2.1.1.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.3": {
       "type": "package",
       "serviceable": true,
@@ -3189,12 +3230,26 @@
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
+    "Microsoft.Web.LibraryManager.Build/2.0.96": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-E6673JBzjfwoe3HlVAAxRchfUYloRsCwO/uWyjHswb0PZeFdRjYUJsLU3v4o3l2RQ596bGrLKv6rCWfbVDy0iQ==",
+      "path": "microsoft.web.librarymanager.build/2.0.96",
+      "hashPath": "microsoft.web.librarymanager.build.2.0.96.nupkg.sha512"
+    },
     "Microsoft.Win32.Registry/4.5.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "mylib/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vBm0Y3SVc+rRq0Q+041mYhemKN1nty9dlJ0Si9CgeJW/tABQxEH78U0+LHOf+2iaqryymlPIP6cuFvc6ybjKBg==",
+      "path": "mylib/1.1.0",
+      "hashPath": "mylib.1.1.0.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.2": {
       "type": "package",
@@ -3237,6 +3292,13 @@
       "sha512": "sha512-YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==",
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
+    },
+    "SampleDependency/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rkrKnTI2KT/L+BaaB6/xZbDiqyQ702TxYp5adqgC/GYU7KBufnNArz/5KNetThpOeXmVEMg0VlFU+9/cKz0L4w==",
+      "path": "sampledependency/1.0.0",
+      "hashPath": "sampledependency.1.0.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -3496,6 +3558,13 @@
       "sha512": "sha512-uv1ynXqiMK8mp1GM3jDqPCFN66eJ5w5XNomaK2XD+TuCroNTLFGeZ+WCmBMcBDyTFKou3P6cR6J/QsaqDp7fGQ==",
       "path": "system.runtime.interopservices/4.3.0",
       "hashPath": "system.runtime.interopservices.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.Loader/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DHMaRn8D8YCK2GG2pw+UzNxn/OHVfaWx7OTLBD/hPegHZZgcZh3H6seWegrC4BYwsfuGrywIuT+MQs+rPqRLTQ==",
+      "path": "system.runtime.loader/4.3.0",
+      "hashPath": "system.runtime.loader.4.3.0.nupkg.sha512"
     },
     "System.Runtime.Serialization.Formatters/4.3.0": {
       "type": "package",
@@ -4682,7 +4751,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Runtime.Loader/4.1.1.0": {
+    "System.Runtime.Loader.Reference/4.1.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
